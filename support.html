@@ -10,8 +10,8 @@
 </head>
 
 <body class="min-h-screen bg-white text-slate-700">
-  <header class="border-b border-slate-100 bg-white">
-    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10" aria-label="Main navigation">
+  <header class="border-b border-slate-100 bg-white px-6 py-4 lg:px-10">
+    <div class="mx-auto flex max-w-6xl items-center justify-between" aria-label="Main navigation">
       <div class="flex items-center gap-8">
         <a href="./index.html" class="block h-14 w-20" aria-label="Crunchies home">
           <img src="asset/logo.jpg" alt="Crunchies logo" class="h-full w-full object-contain" />
@@ -21,14 +21,14 @@
         </button>
       </div>
 
-         <nav aria-label="Main navigation" class="hidden md:block">
+      <nav aria-label="Main navigation" class="hidden md:block">
       <ul class="flex items-center gap-8 font-bold text-lg text-gray-800">
         <li><a href="./index.html" class="hover:text-red-600 transition">Home</a></li>
         <li><a href="menu.html" class="hover:text-red-600 transition">Menu</a></li>
         <li><a href="#" class="hover:text-red-600 transition">My Account</a></li>
         <li><a href="./support.html" class="hover:text-red-600 transition">Support</a></li>
       </ul>
-    </nav>
+      </nav>
 
       <button type="button" aria-label="View cart" class="relative text-red-600 hover:text-red-700">
         <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -37,17 +37,28 @@
           <path d="M2.5 3h2l2.6 12.6a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 7H6" />
         </svg>
       </button>
-    </nav>
+    </div>
+    <details class="relative mx-auto mt-3 max-w-6xl md:hidden">
+      <summary class="flex w-fit cursor-pointer list-none items-center justify-center rounded-md border border-red-600 px-4 py-2 text-sm font-bold text-red-600">Menu</summary>
+      <nav aria-label="Mobile navigation" class="absolute left-0 right-0 z-20 mt-2 rounded-lg border border-slate-100 bg-white p-3 shadow-lg">
+        <ul class="space-y-1 font-semibold text-slate-700">
+          <li><a href="./index.html" class="block rounded px-3 py-3 hover:bg-red-50 hover:text-red-600">Home</a></li>
+          <li><a href="menu.html" class="block rounded px-3 py-3 hover:bg-red-50 hover:text-red-600">Menu</a></li>
+          <li><a href="#" class="block rounded px-3 py-3 hover:bg-red-50 hover:text-red-600">My Account</a></li>
+          <li><a href="./support.html" class="block rounded px-3 py-3 text-red-600 hover:bg-red-50">Support</a></li>
+        </ul>
+      </nav>
+    </details>
   </header>
 
     <main class="mx-auto max-w-6xl px-6 pb-16 lg:px-10">
         <div class="relative mt-10 h-64 overflow-hidden rounded-2xl">
-        <img src="./asset/careers.jpg" alt="" class="h-full w-full object-cover object-center"/>
+        <img src="asset/careers.jpg" alt="" class="h-full w-full object-cover object-center"/>
         <div class="absolute inset-0 flex items-center bg-black/35 px-8 sm:px-14">
           <div class="text-white">
           
-            <h1 class="font-['Great_Vibes'] text-[65px] text-white flex justify-center align-center font-semibold ml-[60px] ">Customer Feedback  &  Support Form</h1>
-            <p class="mt-2 text-sm font-medium sm:text-base flex justify-center align-center ml-[50px]">This is the customer feedback channel of Crunchies Fried Chicken. Kindly ensure to fill in all required details.</p>
+            <h1 class="font-['Great_Vibes'] text-4xl leading-tight text-white sm:text-6xl">Customer Feedback &amp; Support Form</h1>
+            <p class="mt-2 text-sm font-medium sm:text-base">This is the customer feedback channel of Crunchies Fried Chicken. Kindly ensure to fill in all required details.</p>
           </div>
         </div>
         </div>
@@ -151,7 +162,7 @@
     <h2 class="mt-6 text-3xl font-extrabold text-black sm:text-4xl">Subscribe to our Newsletter</h2>
     <p class="mt-5 text-sm text-gray-900 sm:text-base">Be the first to get lucky on our amazing offers</p>
 
-    <form class="mx-auto mt-9 flex max-w-4xl items-center rounded-full bg-white p-1.5" action="#" method="post">
+    <form class="mx-auto mt-9 flex max-w-4xl flex-col items-stretch gap-1.5 rounded-3xl bg-white p-1.5 sm:flex-row sm:items-center sm:rounded-full" action="#" method="post">
     <label for="newsletter-email" class="sr-only">Email Address</label>
     <input id="newsletter-email" name="email" type="email" placeholder="Email Address" required class="min-w-0 flex-1 rounded-full bg-white px-5 py-4 text-black outline-none placeholder:text-gray-400">
     <button type="submit" class="rounded-full bg-red-600 px-8 py-4 font-semibold text-white transition hover:bg-red-700 sm:px-10">Subscribe Now</button>
@@ -164,7 +175,7 @@
       <div class="grid gap-8 lg:grid-cols-[1.1fr_1fr_1fr] lg:items-start">
         <div>
           <div class="mt-4 md:mt-6">
-            <img src="asset\logo.jpg" alt="Logo" class="w-25 h-25 object-contain "/>
+            <img src="asset/logo.jpg" alt="Logo" class="h-25 w-25 object-contain "/>
             <h3 class="mb-3 text-[1.8rem] font-extrabold leading-tight md:text-[2rem]">Opening Hours</h3>
             <p class="mb-1 text-sm font-medium md:text-base">Mondays to Sundays</p>
             <p class="text-sm font-medium md:text-base">7:00 AM to 9:00 PM</p>
@@ -199,7 +210,7 @@
         </div>
       </div>
 
-      <div class="mt-[-130px] ml-[510px] grid gap-5 lg:grid-cols-[1.1fr_1fr] lg:items-end">
+      <div class="mt-2 grid gap-5 lg:col-span-2 lg:items-end">
         <div>
           <h3 class="mb-3 text-[1.8rem] font-extrabold leading-tight md:text-[2rem]">Find Us Here</h3>
           <div class="flex items-center gap-3 text-xl font-bold md:gap-4 md:text-2xl">
